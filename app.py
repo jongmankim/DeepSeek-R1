@@ -5,6 +5,7 @@ from openai import OpenAI
 client = OpenAI(base_url="http://127.0.0.1:1234/v1", api_key="lm-studio")
 completion = client.chat.completions.create(
     model="lmstudio-community/gemma-2-9b-it-GGUF", 
+    #model="lmstudio-community/gemma-2-27b-it-GGUF", 
     messages=[
         {"role": "system", "content": "You are a helpful assistant."}, 
         {"role": "user", "content": "우리는 무엇을 위해 살아가나요?"}
