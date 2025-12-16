@@ -1,4 +1,14 @@
-import streamlit as st
+try:
+    import streamlit as st
+except ModuleNotFoundError:
+    print("Streamlit 모듈이 설치되어 있지 않습니다.")
+    print("아래 사항을 확인하세요:")
+    print("1. 'pip show streamlit' 명령어로 설치 경로를 확인하세요.")
+    print("2. 현재 실행 중인 Python 환경(가상환경 등)이 streamlit이 설치된 환경과 동일한지 확인하세요.")
+    print("3. 'which python' 또는 'which python3'로 사용 중인 Python 경로를 확인하세요.")
+    print("4. 'pip install streamlit'을 다시 실행하거나, 'python -m pip install streamlit'을 시도하세요.")
+    exit(1)
+
 import requests
 import pandas as pd
 
